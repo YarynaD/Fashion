@@ -1,0 +1,26 @@
+{
+  "name": "fashion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YarynaD/Fashion.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YarynaD/Fashion/issues"
+  },
+  "homepage": "https://github.com/YarynaD/Fashion#readme",
+  "devDependencies": {
+    "gulp-install": "^1.1.0"
+  },
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-less": "^4.0.0"
+  }
+}
