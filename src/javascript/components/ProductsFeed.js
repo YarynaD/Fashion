@@ -22,10 +22,7 @@ class Grid extends Component {
           <div className="Grid__cell_12 Grid__row">
             {bags.map((bag, i) => (
               <div
-                className={`
-               Grid__cell_3
-               ${i === 0 ? "Grid__cell_alpha" : ""}
-              `}
+                className={`Grid__cell_3 ${i === 0 ? "Grid__cell_alpha" : ""} `}
               >
                 <Product img={bag.img} tag={bag.tag} title={bag.name} />
               </div>
