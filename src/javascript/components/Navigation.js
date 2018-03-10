@@ -1,19 +1,16 @@
 import React, { Component } from "react";
-import "../../style/Navigation.less"
+import "../../style/Navigation.less";
+import navigation from "../../data/navigation";
 
 class Navigation extends Component {
   render() {
     return (
       <nav className="Navigation">
-        <a href="#" className="Navigation__item">
-          United Stats
-        </a>
-        <a href="#" className="Navigation__item">
-          Find a Store
-        </a>
-        <a href="#" className="Navigation__item">
-          Contact us
-        </a>
+        {navigation.map(link => (
+          <a href="#" className="Navigation__item">
+            {link.name}
+          </a>
+        ))}
       </nav>
     );
   }

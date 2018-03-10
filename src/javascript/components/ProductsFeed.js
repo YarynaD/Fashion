@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import Product from "./Product";
-import  "../../style/Grid.less";
-import "../../style/Product-small.less"
+
+import bags from "../../data/bags.json";
+
+import "../../style/Grid.less";
+import "../../style/Product-small.less";
 
 class Grid extends Component {
   render() {
@@ -17,26 +20,23 @@ class Grid extends Component {
             </h3>
           </div>
           <div className="Grid__cell_12 Grid__row">
+            {bags.map((bag, i) => (
+              <div
+                className={`
+               Grid__cell_3
+               ${i === 0 ? "Grid__cell_alpha" : ""}
+              `}
+              >
+                <Product img={bag.img} tag={bag.tag} title={bag.name} />
+              </div>
+            ))}
+
             <div className="Grid__cell_3 Grid__cell_alpha">
               <Product
-                img = "http://res.cloudinary.com/dvhn8lvvz/image/upload/c_scale,h_220,w_220/v1513913669/752fb5187527204fa4fed90d6a195e84--popular-handbags-designer-handbags_lnj5ii.jpg"
-                tag = "bag"
-                title= "Snake bag"
+                img="http://res.cloudinary.com/dvhn8lvvz/image/upload/c_scale,e_improve,h_220,w_220/v1513913847/0a0904c0604a143dfb92089ea348a267--leather-handbags-leather-bags_mrkxsu.jpg"
+                tag="bag"
+                title="Fashionest bag"
               />
-            </div>
-            <div className="Grid__cell_3 Grid__cell_omega">
-              <Product
-                img = "http://res.cloudinary.com/dvhn8lvvz/image/upload/c_pad,h_220,w_220/v1513913488/w-11699322_dtgxy3.jpg"
-                tag = "bag"
-                title= "Woman bag"
-              />
-            </div>
-            <div className="Grid__cell_3 Grid__cell_alpha">
-                <Product
-                  img = "http://res.cloudinary.com/dvhn8lvvz/image/upload/c_scale,e_improve,h_220,w_220/v1513913847/0a0904c0604a143dfb92089ea348a267--leather-handbags-leather-bags_mrkxsu.jpg"
-                  tag = "bag"
-                  title= "Fashionest bag"
-                />
             </div>
             <div className="Grid__cell_3 Grid__cell_omega">
               <figure className="Product-small__item">
